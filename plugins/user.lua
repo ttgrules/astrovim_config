@@ -9,4 +9,31 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "APZelos/blamer.nvim",
+    lazy = false,
+  },
+  {
+    'lukoshkin/trailing-whitespace',
+    lazy = false,
+    config = function ()
+      require'trailing-whitespace'.setup {
+        patterns = { '\\s\\+$' },
+        palette = { markdown = 'RosyBrown' },
+        default_color = 'PaleVioletRed',
+      }
+    end
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = true,
+          hide_gitignored = true,
+        }
+      }
+    }
+  }
 }
