@@ -12,6 +12,10 @@ return {
   {
     "APZelos/blamer.nvim",
     lazy = false,
+    config = function ()
+      -- enable blamer by default if you're in a git repo
+      vim.cmd "let g:blamer_enabled = 1"
+    end
   },
   {
     'lukoshkin/trailing-whitespace',
